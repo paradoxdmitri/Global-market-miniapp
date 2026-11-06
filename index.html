@@ -64,40 +64,10 @@ nav b{display:block;font-size:19px;margin-bottom:4px}
 
 <div class="filters">
 <button class="filter active" onclick="filter('all',this)">Все</button>
-<button class="filter" onclick="filter('rare',this)">Редкие</button>
-<button class="filter" onclick="filter('popular',this)">Популярные</button>
+<button class="filter" onclick="filter('offers',this)">С предложениями</button>
 </div>
 
-<div class="products" id="products">
-<div class="product" data-type="rare">
-<div class="gift">🎁</div>
-<h4>Telegram Gift</h4>
-<div class="price">Цена уточняется</div>
-<div class="muted">Коллекционный подарок</div>
-<button class="buy" onclick="alert('Демо: каталог пока не подключён к боту')">Подробнее</button>
-</div>
-<div class="product" data-type="popular">
-<div class="gift">💎</div>
-<h4>Diamond</h4>
-<div class="price">Цена уточняется</div>
-<div class="muted">Цифровая коллекция</div>
-<button class="buy" onclick="alert('Демо: каталог пока не подключён к боту')">Подробнее</button>
-</div>
-<div class="product" data-type="popular">
-<div class="gift">🌹</div>
-<h4>Rose</h4>
-<div class="price">Цена уточняется</div>
-<div class="muted">Цифровая коллекция</div>
-<button class="buy" onclick="alert('Демо: каталог пока не подключён к боту')">Подробнее</button>
-</div>
-<div class="product" data-type="rare">
-<div class="gift">🚀</div>
-<h4>Rocket</h4>
-<div class="price">Цена уточняется</div>
-<div class="muted">Коллекционный подарок</div>
-<button class="buy" onclick="alert('Демо: каталог пока не подключён к боту')">Подробнее</button>
-</div>
-</div>
+<div class="products" id="products"></div>
 <div class="empty" id="empty">Ничего не найдено</div>
 
 <nav>
@@ -111,37 +81,77 @@ nav b{display:block;font-size:19px;margin-bottom:4px}
 const search = document.getElementById('search');
 const products = document.getElementById('products');
 let gifts = [];
+let offers = [];
+let currentFilter = 'all';
+
+function filter(type, button) {
+    currentFilter = type;
+    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    render();
+}
 
 function render() {
-    const query = search.value.toLowerCase();
+    const query = search.value.trim().toLowerCase();
     products.innerHTML = '';
     let count = 0;
 
     gifts.forEach(gift => {
-        if (!gift.name.toLowerCase().includes(query)) return;
+        const matches = offers.filter(o =>
+            String(o.gift || '').toLowerCase() === String(gift.name || '').toLowerCase()
+        );
+
+        if (!String(gift.name || '').toLowerCase().includes(query)) return;
+        if (currentFilter === 'offers' && matches.length === 0) return;
 
         const card = document.createElement('div');
         card.className = 'product';
 
-        const visual = gift.photo
-            ? '<img src="' + gift.photo + '" style="width:100%;height:115px;object-fit:contain">'
-            : '<div class="gift">🎁</div>';
+        if (gift.photo) {
+            const img = document.createElement('img');
+            img.src = gift.photo;
+            img.alt = gift.name;
+            img.style.cssText = 'width:100%;height:115px;object-fit:contain';
+            card.appendChild(img);
+        } else {
+            const visual = document.createElement('div');
+            visual.className = 'gift';
+            visual.textContent = '🎁';
+            card.appendChild(visual);
+        }
 
-        card.innerHTML = visual +
-            '<h4></h4><div class="muted">Коллекционный подарок</div>' +
-            '<button class="buy">Подробнее</button>';
+        const title = document.createElement('h4');
+        title.textContent = gift.name;
+        card.appendChild(title);
 
-        card.querySelector('h4').textContent = gift.name;
-        card.querySelector('button').onclick = () => {
-            alert('Подарок: ' + gift.name);
+        const price = document.createElement('div');
+        price.className = 'muted';
+        price.style.whiteSpace = 'pre-line';
+
+        if (matches.length) {
+            price.textContent = matches.map(o =>
+                `${o.quantity} шт. — ${o.price} ${o.currency}`
+            ).join('\n');
+        } else {
+            price.textContent = 'Пока нет предложений';
+        }
+        card.appendChild(price);
+
+        const button = document.createElement('button');
+        button.className = 'buy';
+        button.textContent = 'Подробнее';
+        button.onclick = () => {
+            alert(matches.length
+                ? `${gift.name}\n\n${price.textContent}`
+                : `${gift.name}\nПока нет предложений`);
         };
+        card.appendChild(button);
 
         products.appendChild(card);
         count++;
     });
 
-    document.getElementById('empty').style.display =
-        count ? 'none' : 'block';
+    document.getElementById('empty').style.display = count ? 'none' : 'block';
 }
 
 async function loadCatalog() {
@@ -150,9 +160,10 @@ async function loadCatalog() {
         if (!response.ok) throw new Error('Каталог не найден');
         const data = await response.json();
         gifts = data.gifts || [];
+        offers = data.offers || [];
         render();
     } catch (error) {
-        products.innerHTML = '<p>Не удалось загрузить каталог.</p>';
+        products.textContent = 'Не удалось загрузить каталог.';
         console.error(error);
     }
 }
