@@ -1,0 +1,585 @@
+{
+  "gifts": [
+    {
+      "id": 30,
+      "name": "Astral Shard",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 86,
+      "name": "B-Day Candle",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 12,
+      "name": "Berry Box",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 3,
+      "name": "Big Year",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 46,
+      "name": "Bling Binky",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 42,
+      "name": "Bonded Ring",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 80,
+      "name": "Bow Tie",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 33,
+      "name": "Bunny Muffin",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 82,
+      "name": "Candy Cane",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 50,
+      "name": "Cookie Heart",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 6,
+      "name": "Crystal Ball",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 38,
+      "name": "Cupid Charm",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 43,
+      "name": "Daisy",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 84,
+      "name": "Desk Calendar",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 31,
+      "name": "Diamond Ring",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 41,
+      "name": "Durov's Cap",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 53,
+      "name": "Easter Egg",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 55,
+      "name": "Electric Skull",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 18,
+      "name": "Eternal Candle",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 60,
+      "name": "Eternal Rose",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 39,
+      "name": "Evil Eye",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 74,
+      "name": "Flying Broom",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 66,
+      "name": "Fresh Socks",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 8,
+      "name": "Gem Signet",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 63,
+      "name": "Genie Lamp",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 67,
+      "name": "Ginger Cookie",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 77,
+      "name": "Hanging Star",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 57,
+      "name": "Happy Brownie",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 79,
+      "name": "Heart Locket",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 56,
+      "name": "Hex Pot",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 4,
+      "name": "Ice Cream",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 29,
+      "name": "Ion Gem",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 9,
+      "name": "Jack-in-the-Box",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 70,
+      "name": "Jelly Bunny",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 71,
+      "name": "Jester Hat",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 20,
+      "name": "Jingle Bells",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 87,
+      "name": "Khabib's Papakha",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 25,
+      "name": "Kissed Frog",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 48,
+      "name": "Light Sword",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 5,
+      "name": "Loot Bag",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 47,
+      "name": "Love Candle",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 72,
+      "name": "Love Potion",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 78,
+      "name": "Lunar Snake",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 40,
+      "name": "Mad Pumpkin",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 24,
+      "name": "Magic Potion",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 76,
+      "name": "Magic Wand",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 35,
+      "name": "Mini Oscar",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 51,
+      "name": "Moon Pendant",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 83,
+      "name": "Nail Bracelet",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 15,
+      "name": "Neko Helmet",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 2,
+      "name": "Party Drum",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 10,
+      "name": "Party Sparkler",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 54,
+      "name": "Perfume Bottle",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 27,
+      "name": "Pet Snake",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 58,
+      "name": "Petal Shower",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 68,
+      "name": "Plush Pepe",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 23,
+      "name": "Precious Peach",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 62,
+      "name": "Pretty Posy",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 75,
+      "name": "Record Player",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 44,
+      "name": "Restless Jar",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 7,
+      "name": "Sakura Flower",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 21,
+      "name": "Santa Hat",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 19,
+      "name": "Scared Cat",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 61,
+      "name": "Sharp Tongue",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 28,
+      "name": "Signet Ring",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 37,
+      "name": "Skull Flower",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 14,
+      "name": "Sleigh Bell",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 69,
+      "name": "Snake Box",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 22,
+      "name": "Snoop Cigar",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 88,
+      "name": "Snow Globe",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 59,
+      "name": "Snow Mittens",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 45,
+      "name": "Spiced Wine",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 81,
+      "name": "Spy Agaric",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 16,
+      "name": "Star Notepad",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 17,
+      "name": "Stellar Rocket",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 13,
+      "name": "Swag Bag",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 52,
+      "name": "Swiss Watch",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 32,
+      "name": "Tama Gadget",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 85,
+      "name": "Top Hat",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 1,
+      "name": "Toy Bear",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 34,
+      "name": "Trapped Heart",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 11,
+      "name": "Trophy",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 36,
+      "name": "Valentine Box",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 49,
+      "name": "Vintage Cigar",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 73,
+      "name": "Whip Cupcake",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 26,
+      "name": "Winter Wreath",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 65,
+      "name": "Witch Hat",
+      "photo": null,
+      "url": null
+    },
+    {
+      "id": 64,
+      "name": "Xmas Stocking",
+      "photo": null,
+      "url": null
+    }
+  ],
+  "offers": [
+    {
+      "gift": "Astral Shard",
+      "quantity": 1,
+      "price": 230.0,
+      "currency": "Stars"
+    },
+    {
+      "gift": "Sahara",
+      "quantity": 1,
+      "price": 700.0,
+      "currency": "Stars"
+    },
+    {
+      "gift": "Ginger Cookie",
+      "quantity": 1,
+      "price": 200.0,
+      "currency": "Stars"
+    },
+    {
+      "gift": "Plush Pepe",
+      "quantity": 1,
+      "price": 750000.0,
+      "currency": "TON"
+    }
+  ],
+  "market_prices": [
+    {
+      "gift_id": 66,
+      "source": "fragment",
+      "price": 6.0,
+      "currency": "GRAM",
+      "observed_at": "2026-11-06",
+      "status": "ok"
+    },
+    {
+      "gift_id": 20,
+      "source": "fragment",
+      "price": 11.0,
+      "currency": "GRAM",
+      "observed_at": "2026-11-06",
+      "status": "ok"
+    },
+    {
+      "gift_id": 59,
+      "source": "fragment",
+      "price": 10.0,
+      "currency": "GRAM",
+      "observed_at": "2026-11-06",
+      "status": "ok"
+    }
+  ],
+  "manual_prices": []
+}
