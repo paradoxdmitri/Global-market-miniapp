@@ -108,25 +108,57 @@ nav b{display:block;font-size:19px;margin-bottom:4px}
 </nav>
 
 <script>
-const search=document.getElementById('search');
-let current='all';
-function update(){
-let count=0;
-document.querySelectorAll('.product').forEach(p=>{
-let match=p.innerText.toLowerCase().includes(search.value.toLowerCase());
-let type=current==='all'||p.dataset.type===current;
-p.style.display=match&&type?'block':'none';
-if(match&&type)count++;
-});
-document.getElementById('empty').style.display=count?'none':'block';
+const search = document.getElementById('search');
+const products = document.getElementById('products');
+let gifts = [];
+
+function render() {
+    const query = search.value.toLowerCase();
+    products.innerHTML = '';
+    let count = 0;
+
+    gifts.forEach(gift => {
+        if (!gift.name.toLowerCase().includes(query)) return;
+
+        const card = document.createElement('div');
+        card.className = 'product';
+
+        const visual = gift.photo
+            ? '<img src="' + gift.photo + '" style="width:100%;height:115px;object-fit:contain">'
+            : '<div class="gift">🎁</div>';
+
+        card.innerHTML = visual +
+            '<h4></h4><div class="muted">Коллекционный подарок</div>' +
+            '<button class="buy">Подробнее</button>';
+
+        card.querySelector('h4').textContent = gift.name;
+        card.querySelector('button').onclick = () => {
+            alert('Подарок: ' + gift.name);
+        };
+
+        products.appendChild(card);
+        count++;
+    });
+
+    document.getElementById('empty').style.display =
+        count ? 'none' : 'block';
 }
-function filter(type,button){
-current=type;
-document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));
-button.classList.add('active');
-update();
+
+async function loadCatalog() {
+    try {
+        const response = await fetch('./catalog.json');
+        if (!response.ok) throw new Error('Каталог не найден');
+        const data = await response.json();
+        gifts = data.gifts || [];
+        render();
+    } catch (error) {
+        products.innerHTML = '<p>Не удалось загрузить каталог.</p>';
+        console.error(error);
+    }
 }
-search.addEventListener('input',update);
+
+search.addEventListener('input', render);
+loadCatalog();
 </script>
 
 <script>
